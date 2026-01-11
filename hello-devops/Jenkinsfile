@@ -14,23 +14,6 @@ pipeline {
             }
         }
     }
-}
-pipeline {
-    agent any
-
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'Source code checked out'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-    }
 
     post {
         success {
